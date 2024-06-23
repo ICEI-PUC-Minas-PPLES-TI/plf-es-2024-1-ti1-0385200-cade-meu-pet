@@ -25,7 +25,7 @@ const RelatosApp = (function () {
 
     function readRelato(userId, processaDados) {
         fetch(apiUrl, {
-           mode: 'no-cors' 
+           mode: 'no-cors', 
         })
             .then(response => response.json())
             .then(data => {
