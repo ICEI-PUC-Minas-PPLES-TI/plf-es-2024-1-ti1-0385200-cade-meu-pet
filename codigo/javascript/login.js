@@ -36,7 +36,7 @@ async function login() {
     const email = document.getElementById('inputEmail').value;
 
     try {
-        const res = await fetch("https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users", {
+        const res = await fetch("https://backend-cade-meu-pet.vercel.app/users", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ function verificarLogin(event) {
     const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
     if (!user) {
         event.preventDefault();
-        window.location.href = '../html/cadastro_usuario.html';
+        window.location.href = '/html/cadastro_usuario.html';
     }
 }
 
@@ -83,10 +83,10 @@ function updateCadastroButton() {
     const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
     if (user) {
         btnCadastrar.textContent = 'Logado';
-        btnCadastrar.href = '../html/editor_perfil.html';
+        btnCadastrar.href = '/html/editor_perfil.html';
     } else {
         btnCadastrar.textContent = 'Cadastrar';
-        btnCadastrar.href = '../html/cadastro_usuario.html';
+        btnCadastrar.href = '/html/cadastro_usuario.html';
     }
 }
 
