@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
-    const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
+    const apiUrl = 'https://backend-cade-meu-pet.vercel.app/users';
+    const checkEmailUrl = 'https://backend-cade-meu-pet.vercel.app/check-email';
     const formPerfil = document.getElementById("form-perfil");
 
     function displayMessage(mensagem) {
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('inputEmail').value = userEmail;
         } else {
 
-            window.location.href = '../html/cadastro_usuario.html';
+            window.location.href = '/html/cadastro_usuario.html';
         }
     }
 
@@ -179,10 +179,10 @@ function updateCadastroButton() {
     const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
     if (user) {
         btnCadastrar.textContent = 'Logado';
-        btnCadastrar.href = '../html/editor_perfil.html';
+        btnCadastrar.href = '/html/editor_perfil.html';
     } else {
         btnCadastrar.textContent = 'Cadastrar';
-        btnCadastrar.href = '../html/cadastro_usuario.html';
+        btnCadastrar.href = '/html/cadastro_usuario.html';
     }
 }
 
@@ -196,7 +196,7 @@ function logout() {
         localStorage.removeItem('userId');
         localStorage.removeItem('userSenha');
 
-        window.location.href = '../html/cadastro_usuario.html';
+        window.location.href = '/html/cadastro_usuario.html';
     }
 }
 const btnLogout = document.getElementById("btnLogout");
