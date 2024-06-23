@@ -1,5 +1,5 @@
-const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
-const checkEmailUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/check-email';
+const apiUrl = 'https://backend-cade-meu-pet.vercel.app/users';
+const checkEmailUrl = 'https://backend-cade-meu-pet.vercel.app/check-email';
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
@@ -141,7 +141,7 @@ async function verificarLogin(event) {
 
     if (!user) {
         event.preventDefault();
-        window.location.href = '../html/cadastro_usuario.html';
+        window.location.href = '/html/cadastro_usuario.html';
     }
 }
 
@@ -152,10 +152,10 @@ function updateCadastroButton() {
     if (btnCadastrar) {
         if (user) {
             btnCadastrar.textContent = 'Logado';
-            btnCadastrar.href = '../html/editor_perfil.html';
+            btnCadastrar.href = '/html/editor_perfil.html';
         } else {
             btnCadastrar.textContent = 'Cadastrar';
-            btnCadastrar.href = '../html/cadastro_usuario.html';
+            btnCadastrar.href = '/html/cadastro_usuario.html';
         }
     }
 }
@@ -205,7 +205,7 @@ async function createUsuario(usuario) {
             localStorage.setItem('userName', data.nome);
             localStorage.setItem('userEmail', data.email);
             displayMessage("Usuário cadastrado com sucesso");
-            window.location.href = "../html/home.html";
+            window.location.href = "/html/home.html";
         })
         .catch(error => {
             console.error('Erro ao cadastrar usuário via API JSONServer:', error);
