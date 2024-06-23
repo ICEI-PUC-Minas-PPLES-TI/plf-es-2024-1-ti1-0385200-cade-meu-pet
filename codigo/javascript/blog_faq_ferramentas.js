@@ -27,7 +27,7 @@ async function verificarLogin(event) {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
   if (!user) {
     event.preventDefault();
-    window.location.href = '../html/cadastro_usuario.html';
+    window.location.href = '/html/cadastro_usuario.html';
   }
 }
 
@@ -36,9 +36,9 @@ function updateCadastroButton() {
   const user = sessionStorage.getItem('userName') || localStorage.getItem('userName');
   if (user) {
     btnCadastrar.textContent = 'Logado';
-    btnCadastrar.href = '../html/editor_perfil.html';
+    btnCadastrar.href = '/html/editor_perfil.html';
   } else {
     btnCadastrar.textContent = 'Cadastrar';
-    btnCadastrar.href = '../html/cadastro_usuario.html';
+    btnCadastrar.href = '/html/cadastro_usuario.html';
   }
 }
