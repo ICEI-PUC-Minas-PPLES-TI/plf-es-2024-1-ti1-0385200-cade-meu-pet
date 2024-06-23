@@ -515,6 +515,25 @@ h1 {
     color: var(--cor0);
   }
 
+    .conteudo {
+    padding: 10px; /* Adapte o padding conforme necessário */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+
+  .butoes {
+    flex-direction: column; /* Empilha os botões verticalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+  }
+
+  .butoes .butao-perdi button,
+  .butoes .butao-achei button {
+    width: 100%; /* Botões ocupam toda a largura disponível */
+  }
+
+  .estatistica {
+    max-width: 100%; /* Garante que a estatística ocupe toda a largura disponível */
+  }
+
   .carrosel {
     padding: 0px;
     margin: 0px;
