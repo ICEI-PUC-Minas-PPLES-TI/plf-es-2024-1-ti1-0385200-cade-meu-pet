@@ -4,7 +4,13 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+// Configuração CORS para permitir solicitações do frontend específico
+const corsOptions = {
+  origin: 'https://frontend-cade-meu-pet.vercel.app',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 
 /* Serve arquivos estáticos das pastas assets e data */
 app.use('/javascript', express.static(path.join(__dirname, 'javascript')));
