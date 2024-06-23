@@ -29,7 +29,53 @@ app.get('/blog', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/blog.html'));
 });
 
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/Login.html'));
+});
 
+app.get('/politicas', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/Politicas.html'));
+});
+
+app.get('/termos', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/Termos.html'));
+});
+
+app.get('/cadastro_animal_perdido', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/cadastro_animal_perdido.html'));
+});
+
+app.get('/cadastro_usuario', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/cadastro_usuario.html'));
+});
+
+app.get('/cadastro_relato', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/cadastro_relato.html'));
+});
+
+app.get('/desaparecidos_localizados', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/desaparecidos_localizados.html'));
+});
+
+app.get('/editor_perfil', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/editor_perfil.html'));
+});
+
+app.get('/faq', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/faq.html'));
+});
+
+app.get('/ferramentas', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/ferramentas.html'));
+});
+
+app.get('/meus_anuncios', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/meus_anuncios.html'));
+});
+
+app.get('/quem_somos', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html/quem_somos.html'));
+});
 
 // E assim vai indo com suas outras páginas...
 
