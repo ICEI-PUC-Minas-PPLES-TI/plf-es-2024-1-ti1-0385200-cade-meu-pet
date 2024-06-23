@@ -2,8 +2,8 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/relatos';
-  const usersApiUrl = 'https://bc8bb33f-6175-4214-998c-292c322364a2-00-2ddr60lv3tm7s.worf.replit.dev/users';
+  const apiUrl = 'https://backend-cade-meu-pet.vercel.app/relatos';
+  const usersApiUrl = 'https://backend-cade-meu-pet.vercel.app/users';
 
   const menuIcon = document.querySelector(".mobile-menu-icon button");
   const menu = document.querySelector(".menu");
@@ -156,7 +156,7 @@ async function verificarLogin(event) {
 
   if (!user) {
     event.preventDefault();
-    window.location.href = '../html/cadastro_usuario.html';
+    window.location.href = '/html/cadastro_usuario.html';
   }
 }
 
@@ -167,10 +167,10 @@ function updateCadastroButton() {
   if (btnCadastrar) {
     if (user) {
       btnCadastrar.textContent = 'Logado';
-      btnCadastrar.href = '../html/editor_perfil.html';
+      btnCadastrar.href = '/html/editor_perfil.html';
     } else {
       btnCadastrar.textContent = 'Cadastrar';
-      btnCadastrar.href = '../html/cadastro_usuario.html';
+      btnCadastrar.href = '/html/cadastro_usuario.html';
     }
   }
 }
