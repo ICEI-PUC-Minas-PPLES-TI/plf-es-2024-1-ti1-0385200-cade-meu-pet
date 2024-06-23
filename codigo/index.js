@@ -17,11 +17,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/home', (req, res) => {
+app.get('/Home', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/Home.html'));
 });
 
-app.get('/dev', (req, res) => {
+app.get('/Dev', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/Dev.html'));
 });
 
@@ -29,15 +29,15 @@ app.get('/blog', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/blog.html'));
 });
 
-app.get('/login', (req, res) => {
+app.get('/Login', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/Login.html'));
 });
 
-app.get('/politicas', (req, res) => {
+app.get('/Politicas', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/Politicas.html'));
 });
 
-app.get('/termos', (req, res) => {
+app.get('/Termos', (req, res) => {
   res.sendFile(path.join(__dirname, 'html/Termos.html'));
 });
 
