@@ -516,12 +516,13 @@ h1 {
     color: var(--cor0);
   }
 
-  .conteudo h1{
-    margin-left:0px;
-  }
-    .conteudo {
-    padding: 10px; /* Adapte o padding conforme necessário */
+   .conteudo {
+    padding: 10px; /* Ajuste conforme necessário */
     text-align: center; /* Centraliza o conteúdo */
+  }
+
+  .conteudo h1 {
+    text-align: center; /* Alinha o h1 no centro */
   }
 
   .butoes {
