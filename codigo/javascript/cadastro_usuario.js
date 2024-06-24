@@ -1,5 +1,5 @@
 const apiUrl = 'https://backend-cade-meu-pet.vercel.app/users';
-const checkEmailUrl = 'https://backend-cade-meu-pet.vercel.app/check-email';
+const checkEmailUrl = 'http://localhost:3000/check-email';
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
