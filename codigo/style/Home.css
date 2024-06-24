@@ -516,28 +516,32 @@ h1 {
     color: var(--cor0);
   }
 
-   .conteudo {
-    padding: 10px; /* Ajuste conforme necessário */
-    text-align: center; /* Centraliza o conteúdo */
+@media screen and (max-width: 768px) {
+  .conteudo {
+    padding: 10px; 
+    text-align: center; 
   }
 
   .conteudo h1 {
-    text-align: center; /* Alinha o h1 no centro */
+    text-align: center; 
+    margin-left: 0; 
   }
 
   .butoes {
-    flex-direction: column; /* Empilha os botões verticalmente */
-    gap: 10px; /* Espaçamento entre os botões */
+    flex-direction: column; 
+    gap: 10px; 
   }
 
   .butoes .butao-perdi button,
   .butoes .butao-achei button {
-    width: 100%; /* Botões ocupam toda a largura disponível */
+    width: 100%; 
   }
 
   .estatistica {
-    max-width: 100%; /* Garante que a estatística ocupe toda a largura disponível */
+    max-width: 100%;
   }
+}
+
 
   .carrosel {
     padding: 0px;
