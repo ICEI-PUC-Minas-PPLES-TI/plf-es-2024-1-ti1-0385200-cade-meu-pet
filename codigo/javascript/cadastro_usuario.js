@@ -8,65 +8,66 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnInsert = document.getElementById("btnInsert");
     const formCadastro = document.getElementById("form-contato"); // Definindo a variável formCadastro
 
-    btnInsert.addEventListener('click', function (event) {
-        event.preventDefault();
+   btnInsert.addEventListener('click', function (event) {
+    event.preventDefault();
 
-        if (!formCadastro.checkValidity()) {
-            displayMessage("Preencha o formulário corretamente.");
-            return;
-        }
+    if (!formCadastro.checkValidity()) {
+        displayMessage("Preencha o formulário corretamente.");
+        return;
+    }
 
-        const nome = document.getElementById('inputNome').value;
-        const email = document.getElementById('inputEmail').value;
-        const senha = document.getElementById('inputSenha').value;
+    const nome = document.getElementById('inputNome').value;
+    const email = document.getElementById('inputEmail').value;
+    const senha = document.getElementById('inputSenha').value;
 
-        if (!validateName(nome)) {
-            displayMessage("Nome inválido. Por favor, insira um nome válido.");
-            return;
-        }
+    if (!validateName(nome)) {
+        displayMessage("Nome inválido. Por favor, insira um nome válido.");
+        return;
+    }
 
-        if (!validateEmail(email)) {
-            displayMessage("Email inválido. Por favor, insira um email válido.");
-            return;
-        }
+    if (!validateEmail(email)) {
+        displayMessage("Email inválido. Por favor, insira um email válido.");
+        return;
+    }
 
-        const passwordValidation = validatePassword(senha);
-        if (!passwordValidation.minLength || !passwordValidation.hasNumber || !passwordValidation.hasSymbol || !passwordValidation.hasUppercase || !passwordValidation.hasLowercase) {
-            displayMessage("Senha inválida. Por favor, siga os requisitos de senha.");
-            return;
-        }
+    const passwordValidation = validatePassword(senha);
+    if (!passwordValidation.minLength || !passwordValidation.hasNumber || !passwordValidation.hasSymbol || !passwordValidation.hasUppercase || !passwordValidation.hasLowercase) {
+        displayMessage("Senha inválida. Por favor, siga os requisitos de senha.");
+        return;
+    }
 
-        console.log(`Verificando email: ${email}`);
+    console.log(`Verificando email: ${email}`);
 
-        fetch(`${checkEmailUrl}?email=${email}`)
-            .then(response => {
-                if (response.status === 400) {
-                    return response.json().then(data => {
-                        throw new Error(data.message);
-                    });
-                }
-                if (!response.ok) {
-                    throw new Error('Erro ao verificar email');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log(`Resposta do servidor: ${JSON.stringify(data)}`);
-                const usuario = {
-                    nome: nome,
-                    email: email,
-                    senha: senha,
-                    relatos: [],
-                    animais_perdidos: []
-                };
+    fetch(`${checkEmailUrl}?email=${email}`)
+        .then(response => {
+            if (response.status === 400) {
+                return response.json().then(data => {
+                    throw new Error(data.message); // Lança um erro com a mensagem do backend
+                });
+            }
+            if (!response.ok) {
+                throw new Error('Erro ao verificar email');
+            }
+            return response.json(); // Continua para o próximo then se estiver tudo ok
+        })
+        .then(data => {
+            console.log(`Resposta do servidor: ${JSON.stringify(data)}`);
+            const usuario = {
+                nome: nome,
+                email: email,
+                senha: senha,
+                relatos: [],
+                animais_perdidos: []
+            };
 
-                createUsuario(usuario);
-            })
-            .catch(error => {
-                console.error('Erro ao verificar email via API JSONServer:', error.message);
-                displayMessage(error.message);
-            });
-    });
+            createUsuario(usuario);
+        })
+        .catch(error => {
+            console.error('Erro ao verificar email ou cadastrar usuário:', error.message);
+            displayMessage(error.message); // Exibe a mensagem de erro no frontend
+        });
+});
+
 
     const togglePassword = document.getElementById('togglePassword');
     const passwordField = document.getElementById('inputSenha');
