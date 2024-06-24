@@ -1,5 +1,5 @@
-const apiUrl = 'https://backend-cade-meu-pet.vercel.app/users';
-const checkEmailUrl = 'http://localhost:3000/check-email';
+const apiUrl = 'http://localhost:3000/users'; 
+const checkEmailUrl = 'http://localhost:3000/check-email'; 
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".mobile-menu-icon button");
@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    console.log(`Verificando email: ${email}`);
+    console.log(Verificando email: ${email});
 
-    fetch(`${checkEmailUrl}?email=${email}`)
+    fetch(${checkEmailUrl}?email=${email})
         .then(response => {
             if (response.status === 400) {
                 return response.json().then(data => {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json(); // Continua para o próximo then se estiver tudo ok
         })
         .then(data => {
-            console.log(`Resposta do servidor: ${JSON.stringify(data)}`);
+            console.log(Resposta do servidor: ${JSON.stringify(data)});
             const usuario = {
                 nome: nome,
                 email: email,
