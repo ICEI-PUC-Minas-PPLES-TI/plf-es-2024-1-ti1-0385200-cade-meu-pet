@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch(${checkEmailUrl}?email=${email})
         .then(response => {
-            if (response.status === 400) {
+            if (response.status === 404) {
                 return response.json().then(data => {
                     throw new Error(data.message); // Lança um erro com a mensagem do backend
                 });
