@@ -69,17 +69,29 @@ Ana, aos 17 anos, é uma menor aprendiz em uma loja de roupas, com o hobby de le
 
 ## Histórias de Usuários
 
--Eu, como Heitor, quero buscar na lista de animais perdidos cadastrados no site para encontrar o seu pet perdido.
+-Eu, como Ana, sou tutora e quero cadastrar o meu animal perdido para encontrar ele.
 
--Eu, como Heitor, quero cadastrar o meu pet para ajudar o animal a ser encontrado pelo usuário do site.
+-Eu, como Ana, como usuária busco animais perdidos para auxiliar os tutores q perderam seus pets.
 
--Eu, como Heitor, quero atualizar as informações do animal para informar novos detalhes sobre os status (desaparecido ou encontrado) do pet conforme passa o tempo.
+-Eu, como Ana, quero filtrar os animais por tipo de espécie ou status para encontrar o animal do interesse.
 
--Eu, como Pedro, quero verificar se o pet que encontrei abandonado pertence a alguém, caso tenha dono, para informar a situação atual do animal a esse proprietário.
+-Eu, como Ana, quero ver a quantidade de animais reencontrados os pets com seus tutores para ter entendimento melhor do site.
 
--Eu, como Pedro, quero informar ao tutor do animal que encontrei o pet perdido para reunir o animal com seu tutor.
+-Eu, como Heitor, quero publicar no anúncio a imagem do meu pet para melhor compreensão do meu pet perdido.
 
--Eu, como Ana, informar ao proprietário do pet que uma pessoa conhecida encontrou o animal para auxiliar na reunião do animal e seu tutor.
+-Eu, como Heitor, quero entrar em contato com o tutor para informar do animal que encontrei dele.
+
+-Eu, como Heitor, quero editar os dados do meu perfil para atualizar os dados.
+
+-Eu, como Pedro, quero alterar os status do meu anúncio para atualizar as informações.
+
+-Eu, como Pedro, quero excluir o anúncio para ter opção de cancelar a postagem.
+
+-Eu, como Pedro, quero criar o relato para dizer o reencontro com o animal.
+
+-Eu, como Pedro, quero editar o relato para atualizar informações desse relato.
+
+-Eu, como Pedro, quero excluir o relato para ter opção de cancelar a postagem.
 
 
 ## Requisitos
@@ -89,30 +101,51 @@ Os requisitos de um projeto são classificados em dois grupos:
 -Requisitos Funcionais (RF):
   
   * RF-001: O tutor faz o cadastro do animal perdido. (Prioridade ALTA)
+    
   * RF-002: O usuário busca animais perdidos. (Prioridade MÉDIA)
-  * RF-003: O usuário filtra os animais por tipo. (Prioridade BAIXA)
-  * RF-004: O usuário deve ser cadastrado na plataforma. (Prioridade ALTA)
-  * RF-005: O tutor deve publicar mídias sobre o pet para procura. (Prioridade MÉDIA)
-  * RF-006: O tutor deve ser cadastrado na plataforma. (Prioridade MÉDIA)
+    
+  * RF-003: O usuário e tutor filtra os animais por tipo e status. (Prioridade BAIXA)
+    
+  * RF-004: O sistema fornecerá métricas sobre o número de animais reunidos com seus tutores.(Prioridade Alta)
+    
+  * RF-005: O tutor deve publicar imagem sobre o pet para procura por meio url. (Prioridade MÉDIA)
+    
+  * RF-006: Os usuários ou tutores podem excluir o anúncio (Prioridade Alta)
+    
   * RF-007: O usuário deve entrar em contato com o tutor (quando achar o pet). (Prioridade ALTA)
-  * RF-008: O usuário e o tutor podem editar seu perfil na plataforma. (Prioridade MÉDIA)
-  * RF-009: Os usuários podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status e removendo-o das listagens de animais perdidos. (Prioridade MÉDIA)
-  * RF-010: Os usuarios podem criar relatos sobre os reencontros de animais com seus tutores.(Prioridade MÉDIA)
+    
+  * RF-008: O usuário e o tutor podem editar dados do seu perfil na plataforma. (Prioridade MÉDIA)
+    
+  * RF-009: O tutor podem marcar um animal como "encontrado" quando reunido com seu dono, atualizando o status. (Prioridade MÉDIA)
+    
+  * RF-010: Os usuários ou tutores podem criar relatos sobre o reencontro de animais.(Prioridade MÉDIA)
+    
+  * RF-011: Os usuários ou tutores podem editar relatos sobre o reencontro de animais.(Prioridade MÉDIA)
+    
+  * RF-012: Os usuários ou tutores podem excluir relatos sobre o reencontros de animais.(Prioridade MÉDIA)
+
+
 
   
 
 -Requisitos Não Funcionais (RNF):
   
   * RNF-001: Desenvolvimento do site usando HTML, CSS e JS. (Prioridade ALTA)
-  * RNF-002: Utilização de banco de dados Json server pelo Replit. (Prioridade MÉDIA)
+    
+  * RNF-002: Utilização de banco de dados Json server através do Node.js. (Prioridade MÉDIA)
+    
   * RNF-003: Suporte para todos os navegadores gerais. (Prioridade BAIXA)
+    
   * RNF-004: Site responsivo. (Prioridade MÉDIA)
+    
   * RNF-005: Suporte para múltiplos dispositivos. (Prioridade MÉDIA)
-  * RNF-006: Respostas rápidas. (Prioridade ALTA)
-  * RNF-007: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA)
-  * RNF-008: Resposta imediata  para verificar se o email ja existe ou se ja esta cadastrado no site. (Prioridade MÉDIA)
-  * RNF-009: Rapida resposta pra validar senha do usuario.(Prioridade MÉDIA)
-  * RNF-010: O Usuario so vai conseguir usar certas funções como criar relatos e criar um anuncio se estiver logado no site. (Prioridade MÉDIA)
+    
+  * RNF-006: O sistema é altamente escalável, preparado para gerenciar um aumento expressivo no número de usuários e de dados, mantendo o desempenho otimizado. (Prioridade MÉDIA)
+    
+  * RNF-007: A resposta de validação de email já cadastrado na plataforma em menos de cinco segundos. (Prioridade MÉDIA)
+    
+  * RNF-008:  A resposta de validação de senha do na plataforma em menos de cinco segundos.(Prioridade MÉDIA)
+
 
 ## User Flow
 ![user_flow](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/dcba3412-9358-4d5f-8c1e-6c3ea978d425)![user_flowM](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/2c53d6b8-2a03-47a9-ae24-3934f9989da7)
@@ -182,7 +215,8 @@ Os requisitos de um projeto são classificados em dois grupos:
 ![paleta_de_cores](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/798e8187-6adc-488a-afde-b81e110cb94a)
 
 ***Fontes***
-![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/f5be4455-144c-4017-9f5f-d1e3d9348a75)
+![fonte_principal](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/8b225605-6880-4475-8e0c-caa02b495efb)
+)
 
 ![fonte_secundaria](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet/assets/159904717/a35322fb-66d3-4bbc-9238-57d192d62494)
 
@@ -234,7 +268,7 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 ## Gestão de Projetos
 
-### Metodologia
+### Ferramentas
 
 Detalhes sobre a organização do grupo e o ferramental empregado:
 
@@ -259,7 +293,8 @@ Detalhes sobre a organização do grupo e o ferramental empregado:
 -Documento do projeto: Plataforma Google Docs
 [Link Documento](https://docs.google.com/document/d/1xydXDK6kS5NxECG3zvJY3m9ViWeQIACuT7fRflGZUjk/edit?usp=sharing)
 
--Hospedagem do codigo:
+-Node.js: Plataforma Replit
+[Link Node.js](https://replit.com/@mafpinto/JSONServer-cade-meu-pet?)
 
 
 
